@@ -15,3 +15,10 @@
 
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
+
+git clone https://github.com/liangchaofu/packages.git package/lcf
+git clone https://github.com/jerrykuku/luci-theme-argon.git package/lcf
+git clone https://github.com/liangchaofu/golang.git tools
+
+sed -i '$a tools-y += ucl upx' tools/Makefile
+sed -i '$a $(curdir)/upx/compile := $(curdir)/ucl/compile' tools/Makefile
