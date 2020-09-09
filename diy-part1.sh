@@ -17,6 +17,13 @@
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 
 git clone https://github.com/liangchaofu/packages.git package/lcf
+
+cd tools
+mkdir lcf
+git clone https://github.com/liangchaofu/upx.git tools/lcf
+mv tools/lcf/.git tools
+rmdir lcf
+git reset --hard HEAD
 git clone https://github.com/liangchaofu/upx.git tools
 
 sed -i '$a tools-y += ucl upx' tools/Makefile
