@@ -13,14 +13,19 @@
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
-cd feeds/packages/lang
-mkdir lcf
-git clone https://github.com/liangchaofu/golang.git feeds/packages/lang/lcf
-mv feeds/packages/lang/lcf/.git feeds/packages/lang
-rmdir lcf
-git reset --hard HEAD
+#cd feeds/packages/lang
+#mkdir lcf
+#git clone https://github.com/liangchaofu/golang.git feeds/packages/lang/lcf
+#mv feeds/packages/lang/lcf/.git feeds/packages/lang
+#rmdir lcf
+#git reset --hard HEAD
+git init
+git remote add origin https://github.com/liangchaofu/golang.git
+git fetch
+git branch master origin/master
+git checkout master
 git clone https://github.com/liangchaofu/golang.git feeds/packages/lang
 
 rm -rf feeds/packages/net/shadowsocks-libev
 rm -rf feeds/luci/applications/luci-app-shadowsocks-libev
-packages/net/aria2/Makefile | sed '96,100d'
+n1 feeds/packages/net/aria2/Makefile | sed '96,100d'
