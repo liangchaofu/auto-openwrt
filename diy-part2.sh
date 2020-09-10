@@ -13,8 +13,15 @@
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
+cd feeds/packages/lang
+mkdir lcf
+git clone https://github.com/liangchaofu/golang.git feeds/packages/lang/lcf
+mv feeds/packages/lang/lcf/.git feeds/packages/lang
+rmdir lcf
+git reset --hard HEAD
 git clone https://github.com/liangchaofu/golang.git feeds/packages/lang
 
 rm -rf feeds/packages/net/shadowsocks-libev
 rm -rf feeds/luci/applications/luci-app-shadowsocks-libev
-rm -rf feeds/packages/net/aria2/files
+feeds/packages/net/aria2/Makefile | sed '/aria2.init/d'
+feeds/packages/net/aria2/Makefile | sed '/aria2.conf/d'
