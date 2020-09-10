@@ -23,5 +23,4 @@ git clone https://github.com/liangchaofu/golang.git feeds/packages/lang
 
 rm -rf feeds/packages/net/shadowsocks-libev
 rm -rf feeds/luci/applications/luci-app-shadowsocks-libev
-feeds/packages/net/aria2/Makefile | sed '/aria2.init/d'
-feeds/packages/net/aria2/Makefile | sed '/aria2.conf/d'
+packages/net/aria2/Makefile | sed '96,100d'
