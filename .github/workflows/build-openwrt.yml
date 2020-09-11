@@ -28,7 +28,7 @@ on:
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt.git
-  REPO_BRANCH: openwrt-19.07
+  REPO_BRANCH: master
 #  REPO_TAG: v19.07.4
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
