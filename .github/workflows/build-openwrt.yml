@@ -18,7 +18,7 @@ on:
     branches:
       - main
     tags:
-      - 'v19.07.4'
+    - 'v*'
     paths:
       - '.config'
 #  schedule:
