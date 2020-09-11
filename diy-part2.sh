@@ -15,4 +15,4 @@
 
 rm -rf feeds/packages/net/shadowsocks-libev
 rm -rf feeds/luci/applications/luci-app-shadowsocks-libev
-sed -i '96,100s/^/#/g' feeds/packages/net/aria2/Makefile
+#sed -i '96,100s/^/#/g' feeds/packages/net/aria2/Makefile
