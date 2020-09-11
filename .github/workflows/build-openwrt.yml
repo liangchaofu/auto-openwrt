@@ -17,6 +17,8 @@ on:
   push:
     branches:
       - main
+    tags:
+      - 'v19.07.4'
     paths:
       - '.config'
 #  schedule:
@@ -27,7 +29,7 @@ on:
 env:
   REPO_URL: https://github.com/openwrt/openwrt.git
   REPO_BRANCH: openwrt-19.07
-  REPO_CHECKOUT: v19.07.4
+  REPO_TAG: v19.07.4
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
   DIY_P1_SH: diy-part1.sh
